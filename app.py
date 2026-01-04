@@ -14,4 +14,16 @@ def get_random_quote():
             "author": data.get("author")
         }
     except Exception as e:
+        print(f"Error fetching quote: {e}")
+        return {
+        "text": "Srry No quote :("
+        "author": "me"
+    }
     
+@app.route('/')
+def home():
+    quote = get_random_quote()
+    return render_template('index.html', quote=quote)
+
+if __name__ = '__main__':
+    app.run(debug=True)
