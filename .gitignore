@@ -1,0 +1,17 @@
+# Python internals
+__pycache__/
+*.pyc
+
+# Virtual Environments (Important!)
+venv/
+env/
+.venv/
+
+# Environment Variables (for security)
+.env
+
+# macOS system files
+.DS_Store
+
+# VS Code settings (optional)
+.vscode/
