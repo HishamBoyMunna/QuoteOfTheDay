@@ -10,13 +10,13 @@ def get_random_quote():
         response.raise_for_status()
         data = response.json()
         return {
-            "text": data.get("quote")
+            "text": data.get("quote"),
             "author": data.get("author")
         }
     except Exception as e:
         print(f"Error fetching quote: {e}")
         return {
-        "text": "Srry No quote :("
+        "text": "Srry No quote :(",
         "author": "me"
     }
     
